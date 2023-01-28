@@ -16,7 +16,7 @@ public static boolean Insertuser (RegisterUser registerUser) {
 			ConnectionTest connectionTest = new ConnectionTest();
 			Connection con = connectionTest.getConnection();
 			// SQL Query
-			String s = "insert into user(Name,Username,Password) values(?,?,?)";
+			String s = "insert into user1(NAME,USERNAME,PASSWORD) values(?,?,?)";
 			// Prepared Statement
 			PreparedStatement preparedStatement = con.prepareStatement(s);
 			// set values of parameter

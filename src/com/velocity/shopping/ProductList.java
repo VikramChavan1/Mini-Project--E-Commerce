@@ -11,8 +11,9 @@ public class ProductList {
 
 		public void getProductList()throws ClassNotFoundException, SQLException {
 		try {
+			
 			String sql1 = "insert into user(productID,productName,productDetails,price,quantity)"
-					+ "values(101,'book','maths book',200,100)";
+					+ "values(111,'book','maths book',200,100)";
 			String sql2 = "insert into user(productID,productName,productDetails,price,quantity)"
 					+ "values(102,'notebook','single ruled book',120,100)";
 			String sql3 = "insert into user(productID,productName,productDetails,price,quantity)"

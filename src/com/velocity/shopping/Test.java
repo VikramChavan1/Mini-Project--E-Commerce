@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Test {
 	 
@@ -77,7 +78,9 @@ public class Test {
 				}
 				Admin admin = new Admin();
 				admin.adminMenu();
+				admin.getUserDetails();
 			}
+			
 			if (a == 4) {
 				
 				// exit
@@ -86,11 +89,43 @@ public class Test {
 			else {
 				
 			}
+			ProductList list = new ProductList();
+			list.getProductList();
+			
+			Login login = new Login();
+			login.validateLogin("Username","Password");
+			
+		        Scanner scanner = new Scanner(System.in);
 
+		        for (int i = 1; i <= 3; i++) {
+		            System.out.println("Name");
+		            String name = scanner.next();
+		            System.out.println("Username");
+		            String username = scanner.next();
+		            System.out.println("Password");
+		            String password = scanner.next();
+		           
+		        
+		    
+			InsertUser insertUser = new InsertUser();
+			insertUser.Insertuser(null);
+		    
+			Product product = new Product();
+			product.productInfo();
+			product.getQuantity();
+			
+			Cart cart = new Cart();
+			cart.addToCart();
+			
+			CheckOut checkOut = new CheckOut();
+			checkOut.CheckOutDetails();
+			
+			OrderHistory orderHistory = new OrderHistory();
+			orderHistory.previousOrderHistory();
 		}
 		System.out.println("Thank You For Visiting Us....");
 
 	}
 		
+ }
 }
-
