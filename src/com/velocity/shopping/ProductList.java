@@ -2,14 +2,14 @@ package com.velocity.shopping;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 //Inserting product list using Statement
 public class ProductList {
 
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	//public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
+		public void getProductList()throws ClassNotFoundException, SQLException {
 		try {
 			String sql1 = "insert into user(productID,productName,productDetails,price,quantity)"
 					+ "values(101,'book','maths book',200,100)";
@@ -34,7 +34,7 @@ public class ProductList {
 			// Load the driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			// establish the connection
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stationary", "root", "root");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stationary", "root","Root");
 			// create the sql statements
 			java.sql.Statement stmt = con.createStatement();
 			// submit the sql statements to database..
